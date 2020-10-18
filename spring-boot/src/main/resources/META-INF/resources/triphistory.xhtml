@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <title>Trip History</title>
+</h:head>
+<h:body>
+    <p:dataTable var="trip" value="#{tripHistory.tripList}">
+        <p:column headerText="Id">
+            <h:outputText value="#{trip.id}" />
+        </p:column>
+
+        <p:column headerText="Name">
+            <h:outputText value="#{trip.name}" />
+        </p:column>
+
+        <p:column headerText="Start Date">
+            <h:outputText value="#{trip.startDate}" />
+        </p:column>
+
+        <p:column headerText="Finish Date">
+            <h:outputText value="#{trip.finishDate}" />
+        </p:column>
+
+        <p:column headerText="User Trip Id">
+            <h:outputText value="#{trip.userTrip.id}" />
+        </p:column>
+    </p:dataTable>
+</h:body>
+</html>
